@@ -96,8 +96,8 @@ public class BuyerController implements Initializable {
         try {
             add = Integer.parseInt(addBalanceTF.getText());
         } catch (Exception e) {
-            System.out.println("Buyer did not enter a numeric value");
-            Alerts.display("ERROR", "Please enter a numeric value (Ex: 100)");
+            System.out.println("Buyer did not enter a whole numeric value");
+            Alerts.display("ERROR", "Please enter a whole numeric value (Ex: 100)");
             return;
         }
 
@@ -151,6 +151,9 @@ public class BuyerController implements Initializable {
         //set title 
         Label label = new Label(ui.getTitle());
 
+        //set price
+        Label labelPrice = new Label("$" + ui.getPrice());
+        
         //create buy button
         Button button = new Button("Buy");
 
@@ -163,8 +166,8 @@ public class BuyerController implements Initializable {
         vbox.setSpacing(5);
         vbox.setAlignment(Pos.CENTER);
 
-        //add image, title and button to vbox
-        vbox.getChildren().addAll(imageView, label, button);
+        //add image, title, price, and button to vbox
+        vbox.getChildren().addAll(imageView, label, labelPrice, button);
 
         //add vbox to tile pane
         tilePane.getChildren().add(vbox);
@@ -254,6 +257,6 @@ public class BuyerController implements Initializable {
     //method to update the buyer balance and show on screen
     public void updateBalance(int newBalance) {
         balance = newBalance;
-        balanceLabel.setText(newBalance + "");
+        balanceLabel.setText("$" + newBalance + "");
     }
 }

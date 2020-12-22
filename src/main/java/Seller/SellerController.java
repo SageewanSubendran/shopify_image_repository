@@ -137,7 +137,7 @@ public class SellerController implements Initializable {
             price = Integer.parseInt(priceTF.getText());
         } catch (Exception e) {
             System.out.println("Price has to be in numbers.");
-            Alerts.display("ERROR", "Please enter a numeric value (Ex: 100)");
+            Alerts.display("ERROR", "Please enter a whole numeric value (Ex: 100)");
             return;
         }
 
