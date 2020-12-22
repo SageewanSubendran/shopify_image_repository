@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.scene.image.Image;
 
 /**
  * JavaFX App
@@ -17,8 +18,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        //creating home screen
         scene = new Scene(loadFXML("home"), 640, 480);
         stage.setScene(scene);
+        //application icon
+        stage.getIcons().add(new Image("file:src/main/resources/projects/shopify/shopifylogo.png"));
         stage.show();
     }
 

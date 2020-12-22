@@ -5,6 +5,7 @@ package Seller;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import Alerts.Alerts;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
@@ -103,7 +104,8 @@ public class SellerController implements Initializable {
 
         //if user does not select a file
         if (file == null) {
-            System.out.println("no file is selected");
+            System.out.println("no image is selected");
+            Alerts.display("ATTENTION", "No image selected. Select a valid file type (Ex. .png or .jpg)");
             return;
         }
 
@@ -125,6 +127,7 @@ public class SellerController implements Initializable {
         //check if image is there or not
         if (file == null) {
             System.out.println("No image is selected");
+            Alerts.display("ATTENTION", "No image selected. Select a valid file type (Ex. .png or .jpg)");
             return;
         }
 
@@ -134,17 +137,20 @@ public class SellerController implements Initializable {
             price = Integer.parseInt(priceTF.getText());
         } catch (Exception e) {
             System.out.println("Price has to be in numbers.");
+            Alerts.display("ERROR", "Please enter a numeric value (Ex: 100)");
             return;
         }
 
         //Title Validation
         if (titleTF.getText() == null || "".equals(titleTF.getText())) {
             System.out.println("Title cannot be empty.");
+            Alerts.display("ERROR", "Title cannot be empty. Please enter a title (ex: TestImage)");
             return;
         }
 
         sendImageToServer(file, titleTF.getText(), price);
-        System.out.println("File uploaded to server.");
+        System.out.println("Image uploaded to server.");
+        Alerts.display("SUCCESS", "Image uploaded to marketplace");
 
         //clear all fields after image is upoaded
         image = null;

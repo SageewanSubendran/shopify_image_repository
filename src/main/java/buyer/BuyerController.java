@@ -96,8 +96,8 @@ public class BuyerController implements Initializable {
         try {
             add = Integer.parseInt(addBalanceTF.getText());
         } catch (Exception e) {
-            System.out.println("New balance has to be in numbers.");
-            Alerts.display("Title of Window", "Wow alert box");
+            System.out.println("Buyer did not enter a numeric value");
+            Alerts.display("ERROR", "Please enter a numeric value (Ex: 100)");
             return;
         }
 
@@ -220,6 +220,7 @@ public class BuyerController implements Initializable {
             //check if current balance is insufficient to buy image
             if (balance < price) {
                 System.out.println("Not enough balance to buy the Image.");
+                Alerts.display("ATTENTION", "Insufficient funds, please deposit money");
                 return;
             }
             
@@ -229,6 +230,7 @@ public class BuyerController implements Initializable {
             
             if (selectedDirectory == null) {
                 System.out.println("User cancelled operation.");
+                Alerts.display("ATTENTION", "Operation has been cancelled");
                 return;
             }
             System.out.println("dir - "+selectedDirectory.getAbsolutePath());
@@ -243,6 +245,7 @@ public class BuyerController implements Initializable {
             updateBalance(balance - price);
             
             System.out.println("Image bought");
+            Alerts.display("THANK YOU", "Purchase complete, find image here: \n\n" + selectedDirectory.getAbsolutePath());
         } catch (Exception ex) {
             Logger.getLogger(BuyerController.class.getName()).log(Level.SEVERE, null, ex);
         }
