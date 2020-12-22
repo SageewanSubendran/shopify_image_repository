@@ -63,10 +63,10 @@ public class BuyerController implements Initializable {
     //list to store images recieved from server
     List<UploadedImage> imageList;
 
-    //To store buyer balance
+    //to store buyer balance
     int balance = 0;
 
-    //This method is called when the buyer window starts
+    //this method is called when the buyer window starts
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -88,7 +88,7 @@ public class BuyerController implements Initializable {
         });
     }
 
-    //Method to add balance to the buyer account
+    //method to add balance to the buyer account
     @FXML
     private void addBalanceButtonCLicked(ActionEvent event) {
         int add = 0;
@@ -105,7 +105,7 @@ public class BuyerController implements Initializable {
         addBalanceTF.setText("0");
     }
 
-    //This method is used to refresh the images so that new Images on the server are added to the Tile imageList
+    //this method is used to refresh the images so that new Images on the server are added to the Tile imageList
     @FXML
     private void refreshButtonClicked(ActionEvent event) {
         getImagesFromServer();
@@ -134,7 +134,7 @@ public class BuyerController implements Initializable {
         return response;
     }
 
-    //This method is used to add image from UploadedImage object to Tile Pane
+    //this method is used to add image from UploadedImage object to Tile Pane
     public void addImageToTilePane(UploadedImage ui) {
         //create a vbox to hold image, title and buy button
         VBox vbox = new VBox();
@@ -170,7 +170,7 @@ public class BuyerController implements Initializable {
         tilePane.getChildren().add(vbox);
     }
 
-    //Method to get Images from the server
+    //method to get Images from the server
     public void getImagesFromServer() {
 
         //clear the tiles from tilepane
@@ -182,7 +182,7 @@ public class BuyerController implements Initializable {
         //get images from server as a single String
         sendRequest("getImages");
 
-        //ge the String from server containing all Images
+        //get the String from server containing all Images
         String imagesString = getResponse();
 
         //check if images are empty
@@ -210,7 +210,7 @@ public class BuyerController implements Initializable {
         }
     }
 
-    //Method when buy button is called for any image
+    //method when buy button is called for any image
     public void purchaseImage(UploadedImage ui) {
 
         try {
@@ -251,7 +251,7 @@ public class BuyerController implements Initializable {
         }
     }
 
-    //ethod to update the buyer balance and show on screen
+    //method to update the buyer balance and show on screen
     public void updateBalance(int newBalance) {
         balance = newBalance;
         balanceLabel.setText(newBalance + "");

@@ -68,11 +68,11 @@ public class SellerController implements Initializable {
     File file;
 
     /**
-     * boolean to check if seller program is uploading an image currently
+     * Boolean to check if seller program is uploading an image currently
      */
     AtomicBoolean uploading = new AtomicBoolean(false);
 
-    //This method is called when the seller window starts
+    //this method is called when the seller window starts
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //initailize connection to server and input and output stream
@@ -89,10 +89,10 @@ public class SellerController implements Initializable {
 
     }
 
-    //This method is called when BrowseImage Button is clicked
+    //this method is called when BrowseImage Button is clicked
     @FXML
     private void browseButtonClicked(ActionEvent event) {
-        //FileChooser
+        //FileChooser created to retrieve file
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Upload Image File Path");
         fileChooser.getExtensionFilters().addAll(
@@ -120,7 +120,7 @@ public class SellerController implements Initializable {
 
     }
 
-    //This method is called when Upload Button is clicked
+    //this method is called when Upload Button is clicked
     @FXML
     private void uploadButtonClicked(ActionEvent event) {
 
@@ -179,7 +179,7 @@ public class SellerController implements Initializable {
         return response;
     }
 
-    //This method is used to send image to the server
+    //this method is used to send image to the server
     public void sendImageToServer(File file, String title, int price) {
 
         //set boolean uploading to true before starting image upload
