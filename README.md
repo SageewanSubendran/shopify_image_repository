@@ -1,6 +1,18 @@
 # Shopify's Image Repository Marketplace 
 Simple Java App that simulates an image marketplace where Photographers (sellers) sell images to Shopify Merchants (buyers), ultimately simulating Shopify's Burst Platform.
 
+## Key Features
+### As Seller
+- Upload image(s) to marketplace from desktop accessible folder
+- Set a price for each image
+- Track total sales
+
+### As Buyer
+- Deposit money to account balance
+- Purchase image(s) from marketplace and download to accessible folder on desktop
+- View account balance
+- Refresh marketplace to view latest uploaded images for sale
+
 ## Technologies Used
 - IDE: Apache NetBeans IDE 12.2
 
