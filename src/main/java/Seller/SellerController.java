@@ -41,7 +41,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author Work
+ * @author Sageewan Subendran
  */
 public class SellerController implements Initializable {
 

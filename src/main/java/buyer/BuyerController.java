@@ -6,6 +6,7 @@ package Buyer;
  * and open the template in the editor.
  */
 import Model.UploadedImage;
+import Alerts.Alerts;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,6 +26,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -37,7 +39,7 @@ import javafx.stage.DirectoryChooser;
 /**
  * FXML Controller class
  *
- * @author Work
+ * @author Sageewan Subendran
  */
 public class BuyerController implements Initializable {
 
@@ -79,7 +81,8 @@ public class BuyerController implements Initializable {
 
         //get images from the server
         getImagesFromServer();
-
+        
+        //adds all images retrieved to buyer screen
         imageList.forEach(c -> {
             addImageToTilePane(c);
         });
@@ -94,6 +97,7 @@ public class BuyerController implements Initializable {
             add = Integer.parseInt(addBalanceTF.getText());
         } catch (Exception e) {
             System.out.println("New balance has to be in numbers.");
+            Alerts.display("Title of Window", "Wow alert box");
             return;
         }
 
@@ -213,7 +217,7 @@ public class BuyerController implements Initializable {
             //convert price to int
             int price = Integer.parseInt(ui.getPrice());
             
-            //check if current balance is sifficient to buy image
+            //check if current balance is insufficient to buy image
             if (balance < price) {
                 System.out.println("Not enough balance to buy the Image.");
                 return;

@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 
 /**
  *
- * @author Work
+ * @author Sageewan Subendran
  */
 public class Server {
     private Socket clientSocket;

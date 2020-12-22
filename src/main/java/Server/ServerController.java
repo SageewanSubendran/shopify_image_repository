@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Work
+ * @author Sageewan Subendran
  */
 public class ServerController implements Runnable {
 

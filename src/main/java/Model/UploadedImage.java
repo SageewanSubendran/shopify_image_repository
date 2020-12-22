@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author Work
+ * @author Sageewan Subendran
  */
 public class UploadedImage {
     
