@@ -237,7 +237,7 @@ public class SellerController implements Initializable {
                         //Platform.runLater() is used to update UI elements from other thread
                         @Override
                         public void run() {
-                            amountLabel.setText(sales);
+                            amountLabel.setText("$" + sales);
                         }
                     });                  
                     Thread.sleep(5000);
