@@ -2,10 +2,13 @@
 Simple Java App that simulates an image marketplace where Photographers (sellers) sell images to Shopify Merchants (buyers), ultimately simulating Shopify's Burst Platform.
 
 ## Technologies Used
--> IDE: Apache NetBeans IDE 12.2
--> Language: Java
--> UI Designer: Scene Builder
--> Key Library: JavaFX
+- IDE: Apache NetBeans IDE 12.2
+
+- Language: Java
+
+- UI Designer: Scene Builder
+
+- Key Library: JavaFX
 
 ## How to Run
 1) Clone/download repository
