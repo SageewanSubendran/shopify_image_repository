@@ -8,16 +8,21 @@
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.shopify.HomeController">
    <children>
-      <Label text="Shopify">
+      <Label text="Welcome to Shopify's Image Marketplace">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></Label>
-      <Button fx:id="sellerButton" mnemonicParsing="false" onAction="#sellerButtonClicked" text="Seller">
+      <Label text="Choose a Role">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="sellerButton" mnemonicParsing="false" onAction="#sellerButtonClicked" text="Seller" translateX="-60.0" translateY="10.0">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="buyerButton" onAction="#buyerButtonClicked" text="Buyer">
+      <Button fx:id="buyerButton" onAction="#buyerButtonClicked" text="Buyer" translateX="59.0" translateY="-40.0">
          <font>
             <Font size="14.0" />
          </font></Button>
@@ -25,4 +30,7 @@
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </VBox>
