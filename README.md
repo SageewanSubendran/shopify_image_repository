@@ -33,7 +33,7 @@ Simple Java App that simulates an image marketplace where Photographers (sellers
 ## Simulation Recommendation
 After running one instance of the Java app, click Run Project again to have a second instance. This way you will be able to simulate the buyer and seller experience side by side.
 
-## Role Views
+## Views
 ### Role Selection
 ![alt text](https://github.com/SageewanSubendran/shopify_image_repository/blob/main/role-selection-screenshot.png)
 
