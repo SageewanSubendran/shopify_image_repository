@@ -27,7 +27,7 @@ Simple Java App that simulates an image marketplace where Photographers (sellers
 2) Open Project (preferably with NetBeans)
 4) Build the project (hover over "Run" in the navigation bar and click on "Build Project (shopify)")
 5) Run Server.java (found in Source Packages -> Server -> Server.java)
-6) Once server is running, run the project (run button in top menu bar)
+6) Once server is running, run the project (hover over "Run" in the navigation bar and click on "Run Project (shopify)")
 
 ## Simulation Recommendation
 After running one instance of the Java app, click Run Project again to have a second instance. This way you will be able to simulate the buyer and seller experience side by side.
